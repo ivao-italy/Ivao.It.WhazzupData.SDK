@@ -17,6 +17,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryUrl>https://github.com/ivao-italy/Ivao.It.WhazzupData.SDK</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
