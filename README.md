@@ -1,7 +1,7 @@
 # IVAO IT Whazzup v2 .NET SDK
 Project made with ❤️ by IVAO Italy division.
 
-![Discord](https://img.shields.io/discord/426318927220441089)
+[![Build Status](https://dev.azure.com/sslazio1900/Ivao.It.WhazzupData.SDK/_apis/build/status/Ivao.It.WhazzupData.SDK?branchName=master)](https://dev.azure.com/sslazio1900/Ivao.It.WhazzupData.SDK/_build/latest?definitionId=1&branchName=master) ![Discord](https://img.shields.io/discord/426318927220441089)
 
 .NET SDK to read data from the new IVAO Whazzup JSON format.
 Taking advantage of the newest and fastest .NET technologies like:
