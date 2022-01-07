@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Ivao.It.WhazzupData.SDK.Models;
 using Xunit;
 
 namespace Ivao.It.WhazzupData.SDK.Tests;
@@ -16,6 +17,7 @@ public class ApiCallTests
     [Fact]
     public async Task TestCall()
     {
+        await Task.Delay(5001);
         var ivaoData = await ivao.GetAsync();
 
         Assert.NotNull(ivaoData);
@@ -26,6 +28,7 @@ public class ApiCallTests
     [Fact]
     public async Task TestTooCloseCall()
     {
+        await Task.Delay(5001);
         await ivao.GetAsync();
         await Task.Delay(200);
         await Assert.ThrowsAsync<InvalidOperationException>(async () => await ivao.GetAsync());
@@ -34,11 +37,12 @@ public class ApiCallTests
     [Fact]
     public async Task TestTooCloseCallThanCorrectDelay()
     {
+        await Task.Delay(5001);
         await ivao.GetAsync();
         await Task.Delay(200);
         await Assert.ThrowsAsync<InvalidOperationException>(async () => await ivao.GetAsync());
 
-        await Task.Delay(5001);        
+        await Task.Delay(5001);
         await ivao.GetAsync();
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 namespace Ivao.It.WhazzupData.SDK
 {
     /// <inheritdoc/>
-    public class IvaoData : IIvaoData
+    public sealed class IvaoData : IIvaoData
     {
         private readonly IvaoDataOptions _ivaoOptions;
         private readonly IHttpClientFactory _httpClientFactory;

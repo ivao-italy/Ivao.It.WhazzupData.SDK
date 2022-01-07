@@ -22,9 +22,19 @@ namespace Ivao.It.WhazzupData.SDK
         /// </summary>
         public string WhazzupHttpClientName { get; set; } = "IvaoWhazzupClient";
 
+
         internal void Validate()
         {
-#if !DEBUG
+            if (string.IsNullOrEmpty(WhazzupUrl))
+            {
+                throw new NullReferenceException("WhazzupUrl should be not null or empty");
+            }
+#if DEBUG
+            if (ReadEvery < TimeSpan.FromSeconds(5))
+            {
+                throw new ArgumentException("IVAO API 'ReadEvery' config should be not smaller than 5 seconds.");
+            }
+#else
             if (ReadEvery < TimeSpan.FromSeconds(30))
             {
                 throw new ArgumentException("IVAO API 'ReadEvery' config should be not smaller than 30 seconds.");
