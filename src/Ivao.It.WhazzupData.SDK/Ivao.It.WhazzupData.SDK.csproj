@@ -12,20 +12,18 @@
     <Authors>Emiliano Innocenti</Authors>
     <Company>Emiliano Innocenti</Company>
     <Product>EmiLab Ivao WhazzupToolkit</Product>
-    <Version>1.0.7</Version>
+    <Version>2.0.0-beta</Version>
     <Description>Reads &amp; parses data from IVAO Wazzup file</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryUrl>https://github.com/ivao-italy/Ivao.It.WhazzupData.SDK</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Parsers\" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.1" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="C:\Users\admin\Documents\MyNugetPackageRepo\PostBuild.cmd $(TargetDir)" />
-  </Target>
 
 </Project>
